@@ -17,6 +17,7 @@
         "react-router-dom": "^5.1.0",
         "react-router-redux": "^4.0.8",
         "redux": "^4.0.4",
+        "redux-thunk": "^2.3.0",
         "style-loader": "^1.0.0",
         "whatwg-fetch": "^3.0.0"
     },

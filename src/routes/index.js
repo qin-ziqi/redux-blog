@@ -1,17 +1,18 @@
 import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import { createHashHistory, createBrowserHistory } from 'history';
-
 import Home from '../views/Home';
 import Detail from '../views/Detail';
-// import Frame from '../layouts/Frame';
+import Frame from '../layouts/Frame';
 const hashHistory = createHashHistory();
 
-export default () => (
-    <Router history={hashHistory}>
-        {/* <Route path="/" component={Frame}> */}
-        {/* <IndexRoute component={Home}></IndexRoute> */}
-        <Route path="/detail" component={Detail} />
-        {/* </Route> */}
+const routes = (
+    <Router>
+        <Frame>
+            <Route exact path="/" component={Home} />
+            <Route path="/detail/:id" component={Detail} />
+        </Frame>
     </Router>
 );
+
+export default routes;
