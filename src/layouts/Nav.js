@@ -5,7 +5,7 @@ class Nav extends React.Component {
     render() {
         return (
             <nav>
-                <Link to="home">Home</Link>
+                <Link to="home">Home</Link> <Link to="detail">Detail</Link>
             </nav>
         );
     }
